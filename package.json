@@ -35,5 +35,13 @@
   },
   "devDependencies": {
     "netlify-lambda": "^2.0.1"
+  },
+  "proxy": {
+    "/.netlify/functions": {
+      "target": "http://localhost:9000",
+      "pathRewrite": {
+        "^/\\.netlify/functions": ""
+      }
+    }
   }
 }
